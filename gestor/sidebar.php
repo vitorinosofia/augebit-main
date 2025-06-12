@@ -7,19 +7,19 @@
     <style>
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-SemiBold.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-SemiBold.ttf') format('truetype');
             font-weight: 600;
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-Medium.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-Medium.ttf') format('truetype');
             font-weight: 500;
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-Italic.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-Italic.ttf') format('truetype');
             font-weight: 400;
             font-style: italic;
         }
@@ -39,7 +39,7 @@
             border-radius: 55px;
             background-color:rgba(153, 153, 255, 0.89); 
          opacity: 90%;
-            box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.05);
             height: 390px;
             position: absolute;
             left: 40px;
@@ -172,7 +172,7 @@
     ?>
     
       <div class="logo">
-            <img src="../assets/imgs/augebit.logo.png" alt="Logo" style="width: 100%; height: auto; border-radius: 50%;">
+            <img src="../assets/img/augebit.logo.png" alt="Logo" style="width: 100%; height: auto; border-radius: 50%;">
         </div>
     <div class="sidebar">
       
@@ -183,7 +183,7 @@
                 <li class="menu-item <?= isset($item['class']) ? $item['class'] : '' ?>">
                     <a href="<?= $item['url'] ?>" class="menu-link">
                         <span class="menu-icon">
-                            <img src="../assets/imgs/<?= $item['icon'] ?>" alt="<?= $item['label'] ?>">
+                            <img src="../assets/img/<?= $item['icon'] ?>" alt="<?= $item['label'] ?>">
                         </span>
                         <span><?= $item['label'] ?></span>
                     </a>

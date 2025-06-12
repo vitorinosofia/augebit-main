@@ -44,7 +44,7 @@ foreach ($projetos as $projeto) {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            
         }
         
         body {
@@ -55,32 +55,32 @@ foreach ($projetos as $projeto) {
         
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-SemiBold.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-SemiBold.ttf') format('truetype');
             font-weight: 600;
         }
            
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-Regular.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-Regular.ttf') format('truetype');
             font-weight: 450;
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-Medium.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-Medium.ttf') format('truetype');
             font-weight: 500;
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-Italic.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-Italic.ttf') format('truetype');
             font-weight: 400;
             font-style: italic;
         }
         
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-ExtraLight.ttf') format('truetype');
             font-weight: 200;
         }
 
@@ -338,7 +338,7 @@ foreach ($projetos as $projeto) {
     margin-top:30px;
        /* Adds space between sections */
 
-      margin
+     
 }
 
 .contact .text {
@@ -408,9 +408,14 @@ foreach ($projetos as $projeto) {
       max-width: 1000px;
       margin: 0 auto;
     }
+    .contato-section h3{
+      font-family:"Poppins";
+      font-weight:500; 
+    }
 
     .trabalhos p{
-      font-family: '  Medium';
+      font-family: ' Poppins';
+      font-weight:300;
     }
     .texto h3 {
 
@@ -451,10 +456,11 @@ foreach ($projetos as $projeto) {
     }
 
     .rede p {
-      font-weight: normal;
-      color: var(--roxo-claro);
+      font-weight: 400;
+      color:  #9999FF
+      ;
       font-size: 0.9rem;
-      font-family: 'Medium';
+      font-family: 'Poppins';
     }
 
     /*dverdade*/
@@ -534,30 +540,39 @@ foreach ($projetos as $projeto) {
 .pages {
   margin-left: -110px;
 }
-
-.pages p {
+.pages a {
+  display: block; /* Faz cada link ocupar sua própria linha */
   margin-bottom: 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
+  color: white;
+  text-decoration: none;
   font-size: 0.9rem;
-  font-family: 'Poppins';
-  font-weight: 400;
+  font-family:"Poppins";
+  font-weight:300; 
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
 }
 
-.pages p::after {
+.pages a::after {
   content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
   height: 1px;
-  background: #ffffff;
-  transition: all 0.3s ease;
+  background: white;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
-.pages p:hover::after {
+.pages a:hover::after {
   width: 100%;
+}
+
+/* Mantenha o estilo existente para mobile */
+@media (max-width: 768px) {
+  .pages a {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+  }
 }
 
 .redescociais {
@@ -582,14 +597,14 @@ foreach ($projetos as $projeto) {
 <body>
     <header>
         <div class="logo-header">    
-            <img src="../assets/imgs/augebit.logo.png" alt="Logo da empresa"> 
-            <h1>AUGEBIT</h1>
+            <img src="../assets/img/augebit.logo.png" alt="Logo da empresa"> 
+         
         </div>    
         <nav>       
             <ul>         
                 <li><a href="#" class="active">Home</a></li>         
-                <li><a href="#quem-somos" class="acount">Quem Somos</a></li>         
-                <li><a href="#contato-section" class="contato">Conecte-se</a></li>    
+                <li><a href="#quem-somos" class="acount">Projetos</a></li>         
+                <li><a href="#contato-section" class="contato">Sair</a></li>    
             </ul>     
         </nav>   
     </header>    
@@ -653,44 +668,44 @@ foreach ($projetos as $projeto) {
                 </div>
                 <div class="redes">
                     <div class="rede">
-                        <img src="assets/images/ic_outline-email.png" alt="Email">
+                        <img src="../assets/img/emailroxo.png" alt="Email">
                         <p>Email</p>
                     </div>
                     <div class="rede">
-                        <img src="assets/images/uil_linkedin.png" alt="Linkedin">
+                        <img src="../assets/img/linkedinroxo.png" alt="Linkedin">
                         <p>Linkedin</p>
                     </div>
                     <div class="rede">
-                        <img src="assets/images/ic_baseline-whatsapp.png" alt="Whatsapp">
+                        <img src="../assets/img/zaproxo.png" alt="Whatsapp">
                         <p>Whatsapp</p>
                     </div>
                     <div class="rede">
-                        <img src="assets/images/mdi_instagram.png" alt="Instagram">
+                        <img src="../assets/img/instaroxo.png" alt="Instagram">
                         <p>Instagram</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="rodape">
-            <div class="pages">
-                <p>Home</p>
-                <p>Quem Somos</p>
-                <p>Nossos serviços</p>
-                <p>Entre em contato</p>
-            </div>
-            <div class="logo-rodape">
-                <img src="assets/images/logobranca.png" alt="Logo Augebit">
-                <h1>AUGEBIT</h1>
-                <p>Industrial design</p>
-            </div>
-            <div class="redescociais">
-                <img src="assets/images/emailwhite.png" alt="Email">
-                <img src="assets/images/instawhite.png" alt="Instagram">
-                <img src="assets/images/likendinwhite.png" alt="Linkedin">
-                <img src="assets/images/zapwhite.png" alt="Whatsapp">
-            </div>
-        </footer>
+  <footer class="rodape">
+    <div class="pages">
+       <a href="index.html">Home</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="#contato-section">Entre em contato</a>
+   <a href="logout.php">Sair</a>
+    </div>
+    <div class="logo-rodape">
+      <img src="../assets/img/logobranca.png" alt="Logo Augebit">
+      <h1>AUGEBIT</h1>
+      <p>Industrial design</p>
+    </div>
+    <div class="redescociais">
+      <img src="../assets/img/emailbranco.png" alt="Email">
+      <img src="../assets/img/instabranco.png" alt="Instagram">
+      <img src="../assets/img/linkedinbranco.png" alt="Linkedin">
+      <img src="../assets/img/zapbranco.png" alt="Whatsapp">
+    </div>
+  </footer>
     </div>
 </body>
 </html>

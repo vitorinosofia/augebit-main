@@ -41,6 +41,19 @@ $projetos = $conn->query("SELECT id, titulo FROM projetos");
     <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
+    <header>
+        <div class="logo-header">    
+            <img src="../assets/img/augebit.logo.png" alt="Logo da empresa"> 
+         
+        </div>    
+        <nav>       
+            <ul>         
+                <li><a href="#" class="active">Home</a></li>         
+                <li><a href="#quem-somos" class="acount">Projetos</a></li>         
+                <li><a href="#contato-section" class="contato">Conecte-se</a></li>    
+            </ul>     
+        </nav>   
+    </header>
    <h2>Enviar Documento</h2>
 <form method="post" enctype="multipart/form-data">
     Projeto:

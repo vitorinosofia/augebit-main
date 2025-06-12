@@ -56,14 +56,16 @@ try {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
         }
 
         body {
             background-color: #f5f7fa;
             color: var(--dark-color);
             line-height: 1.6;
-            font-family: 'Poppins'
+              font-family: 'Poppins';
+            font-weight: 400; 
+          
         }
   @font-face {
             font-family: 'Poppins';
@@ -85,7 +87,8 @@ try {
         }
 
         h2{
-            font-family: 'Medium';
+             font-family: 'Poppins';
+            font-weight: 500; 
             font-weight:100;
             color: #3E236A; 
         }
@@ -104,7 +107,8 @@ try {
             margin-bottom: 2rem;
             flex-wrap: wrap;
             gap: 1rem;
-            font-family: 'Medium';
+            font-family: 'Poppins';
+            font-weight: 400; 
         }
 
         .header-container h2 {
@@ -225,6 +229,36 @@ height:50px;
             color: #7f8c8d;
             font-size: 1.1rem;
         }
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonte/Poppins-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+        }
+           
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonte/Poppins-Regular.ttf') format('truetype');
+            font-weight: 450;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonte/Poppins-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonte/Poppins-Italic.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Poppins';
+            src: url('../assets/fonte/Poppins-ExtraLight.ttf') format('truetype');
+            font-weight: 200;
+        }
 
         /* Responsividade */
         @media (max-width: 768px) {
@@ -277,20 +311,211 @@ height:50px;
 
 
         }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            padding: 10px 0;
+        }
+
+        .logo-header {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .logo-header img {
+            position: relative;
+            width: 70px;
+            height: 80px;
+            top: -16px; 
+            left:30px
+        }
+
+        .logo-header h1 {
+          position:relative; 
+            font-size: 30px;
+            font-family: 'Poppins';
+            font-weight: 300;
+            left: 30px;
+        }
+
+        nav ul {
+            padding-right: 100px;
+            display: flex;
+            gap: 80px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #3E236A;
+            text-decoration: none;
+            font-size: 19px;
+            font-family: 'Poppins';
+
+            transition: all 0.3s ease;
+            font-weight: 450;
+        }
+
+        nav a:hover {
+            color: #9999FF;
+        }
+
+        .active {
+            color: #3E236A;
+        }
+
+        .acount {
+            color: #3E236A;
+        }
+
+        .contato {
+            color: #3E236A;
+        }
+       
+        section {
+            padding: 30px;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        .container{
+            margin-top:120px;
+
+        }
+        h2 {
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            margin-left:290px; 
+            font-size: 24px;
+            border-bottom: 2px solid var(--secondary-light);
+            padding-bottom: 10px;
+        }
 
         .header-container img{
 height: 30px;
 width:30px; 
         }
+        .rodape {
+  background-color: #9999FF;
+  width: 100vw; /* Usa a largura total da viewport */
+  min-height: 300px;
+  padding: 60px 15px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  margin-top: 180px;
+  left: 0;
+  box-sizing: border-box;
+}
+
+
+.logo-rodape {
+  text-align: center;
+  display: flex;
+  padding-left: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-rodape img {
+  width: 100px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.logo-rodape h1 {
+  font-size: 1.8rem;
+  font-family: 'Poppins';
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 25px;
+}
+
+.logo-rodape p {
+  font-size: 0.9rem;
+  margin-left: 25px;
+  font-family: 'Poppins';
+   font-weight: 300;
+}
+
+.pages {
+  margin-left: -110px;
+}
+
+.pages p {
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0.9rem;
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+.pages p::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.pages p:hover::after {
+  width: 100%;
+}
+
+.redescociais {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.redescociais img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.redescociais img:hover {
+  transform: scale(1.2);
+}
      
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo-header">    
+            <img src="../assets/img/augebit.logo.png" alt="Logo da empresa"> 
+         
+        </div>    
+        <nav>       
+            <ul>         
+                <li><a href="#" class="active">Home</a></li>         
+                <li><a href="#quem-somos" class="acount">Projetos</a></li>         
+                <li><a href="#contato-section" class="contato">Conecte-se</a></li>    
+            </ul>     
+        </nav>   
+    </header>
     <div class="container">
         <div class="header-container">
             <h2> Funcionários Cadastrados</h2>
             <a href="cadastrar_funcionario.php" class="add-button">
-             <img src="../assets/imgs/mais.png" alt="Adicionar" width="16">  Adicionar Funcionário
+             <img src="../assets/img/mais.png" alt="Adicionar" width="16">  Adicionar Funcionário
             </a>
         </div>
 
@@ -320,7 +545,7 @@ width:30px;
                             </td>
                             <td>
                                 <a href="../tarefas/listar_tarefas.php?funcionario_id=<?= $f['id'] ?>">
-                                  <img src="../assets/imgs/lupa.png" alt="Ver Tarefas" width="16"> Ver Tarefas
+                                  <img src="../assets/img/lupa.png" alt="Ver Tarefas" width="16"> Ver Tarefas
                                 </a>
                             </td>
                         </tr>
@@ -336,5 +561,24 @@ width:30px;
             </div>
         <?php endif; ?>
     </div>
+    <footer class="rodape">
+    <div class="pages">
+      <p>Home</p>
+      <p>Quem Somos</p>
+      <p>Nossos serviços</p>
+      <p>Entre em contato</p>
+    </div>
+    <div class="logo-rodape">
+      <img src="../assets/img/logobranca.png" alt="Logo Augebit">
+      <h1>AUGEBIT</h1>
+      <p>Industrial design</p>
+    </div>
+    <div class="redescociais">
+      <img src="../assets/img/emailbranco.png" alt="Email">
+      <img src="../assets/img/instabranco.png" alt="Instagram">
+      <img src="../assets/img/linkedinbranco.png" alt="Linkedin">
+      <img src="../assets/img/zapbranco.png" alt="Whatsapp">
+    </div>
+  </footer>
 </body>
 </html>

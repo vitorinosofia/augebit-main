@@ -14,7 +14,37 @@
       --sombra: 0 10px 30px rgba(62, 32, 110, 0.2);
       --transicao: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
     }
+   
+        @font-face {
+            font-family: 'Poppins';
+            src: url('assets/fonte/Poppins-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+        }
+           
+        @font-face {
+            font-family: 'Poppins';
+            src: url('assets/fonte/Poppins-Regular.ttf') format('truetype');
+            font-weight: 450;
+        }
 
+        @font-face {
+            font-family: 'Poppins';
+            src: url('assets/fonte/Poppins-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'Poppins';
+            src: url('assets/fonte/Poppins-Italic.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+        }
+        
+        @font-face {
+            font-family: 'Poppins';
+            src: url('assets/fonte/Poppins-ExtraLight.ttf') format('truetype');
+            font-weight: 200;
+        }
 /* Garante que não há margens ou paddings indesejados */
 body {
   margin: 0;
@@ -32,33 +62,12 @@ html, body {
       box-sizing: border-box;
     }
 
-    @font-face {
-      font-family: 'Black';
-      src: url(fontes/Poppins/Poppins-Black.ttf);
-    }
-    @font-face {
-      font-family:'SemiBold' ;
-      src: url(fontes/Poppins/Poppins-SemiBold.ttf);
-    }
-
    
-    @font-face {
-      font-family: 'Italic';
-      src: url(fontes/Poppins/Poppins-Italic.ttf)
-    }
-    @font-face {
-      font-family: 'Medium';
-      src: url(fontes/Poppins/Poppins-Medium.ttf);
-    }
-    
-    @font-face {
-      font-family:  'Light';
-      src: url(fontes/Poppins/Poppins-Light.ttf);
-    }
 
     /* Estilos da Página Principal - CORRIGIDOS */
     .hero {
-      font-family: 'Medium';
+       font-family: "Poppins";
+      font-weight: 300px; 
      background: linear-gradient(20deg, #9999FF, #9999FF, #4747d9 );
   height: 100vh;
   margin: 0;
@@ -110,7 +119,8 @@ html, body {
 
     .logo-header h1 {
       font-size: 30px;
-      font-family: 'Light';
+      font-family: 'Poppins';
+      font-weight: 300px; 
     }
 
     nav ul {
@@ -124,8 +134,8 @@ html, body {
       color: rgb(255, 255, 255);
       text-decoration: none;
       font-size: 19px;
-
-      font-family: 'Light';
+      font-weight: 100px; 
+      font-family: 'Poppins';
       transition: all 0.3s ease;
     }
 
@@ -164,7 +174,6 @@ html, body {
 
     /* Lado esquerdo */
     .left-content {
-
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -175,14 +184,16 @@ html, body {
       width: 700px;
       line-height: 1.1;
       margin-bottom:100px;
-      font-family: "Medium";
+      font-family: "Poppins";
+      font-weight: 400px; 
     }
 .italic p em{
   color:#3e206e;
   
 }
 .buttons button {
-  font-family: 'Medium';
+   font-family: "Poppins";
+      font-weight: 400px; 
 }
     .buttons {
       margin-top: 80px;
@@ -271,7 +282,8 @@ section {
 
     .company-description p {
       font-size: 20px;
-font-family: 'Light';
+font-family: 'Poppins';
+font-weight:400; 
       color: #f9f9ffe3;
       line-height: 1.4;
       text-align: center;
@@ -344,7 +356,8 @@ font-family: 'Light';
       }
     }
         body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Poppins";
+      font-weight: 400; 
       line-height: 1.6;
       color: var(--roxo-principal);
       overflow-x: hidden;
@@ -366,7 +379,8 @@ font-family: 'Light';
   margin-right: 30px;
   margin-bottom: 40px;
   color: var(--roxo-principal);
-  font-family: 'SemiBold';
+  font-family: 'Poppins';
+  font-weight: 500; 
   position: relative;
   z-index: 2;
 
@@ -379,7 +393,8 @@ font-family: 'Light';
       color: var(--roxo-principal);
       margin-bottom: 1.5rem;
       position: relative;
-      font-family: 'SemiBold';
+     font-family: 'Poppins';
+  font-weight: 500; 
       font-size: 40px;
     }
 
@@ -418,7 +433,8 @@ font-family: 'Light';
 
     .content-section {
       display: flex;
-      font-family: 'Medium';
+     font-family: 'Poppins';
+  font-weight: 400; 
       align-items: center;
       gap: 60px;
       max-width: 1200px;
@@ -431,7 +447,8 @@ font-family: 'Light';
 
     .textos h3 {
       font-size: 2.5rem;
-      font-family: 'SemiBold';
+    font-family: 'Poppins';
+  font-weight: 500; 
       line-height: 1.2;
       text-align: left;
       margin-bottom: 2rem;
@@ -500,7 +517,8 @@ font-family: 'Light';
       margin-bottom: 50px;
       position: relative;
       z-index: 1;
-      font-family: 'SemiBold';
+      font-family: 'Poppins';
+  font-weight: 400; 
       font-size: 40px;
     }
 
@@ -528,7 +546,8 @@ font-family: 'Light';
   margin-left:90px;
   font-size: 2.5rem;
   color: var(--roxo-principal);
-  font-family: 'SemiBold';
+ font-family: 'Poppins';
+  font-weight: 500; 
   text-transform: none;
   margin-top: 3ch;
   letter-spacing: 3px;
@@ -573,7 +592,8 @@ font-family: 'Light';
 
 .nome-cliente {
   color: var(--roxo-principal);
-  font-family: 'SemiBold';
+font-family: 'Poppins';
+  font-weight: 400; 
   font-size: 1.0rem;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -702,7 +722,8 @@ font-family: 'Light';
     .slide-text {
       max-width: 600px;
       color: #3e206e;
-      font-family: 'Medium';
+     font-family: 'Poppins';
+  font-weight: 300; 
       font-size: 18px;
       line-height: 1.6;
       text-align: center;
@@ -781,16 +802,19 @@ font-family: 'Light';
     }
 
     .textoreal p {
-     font-family: 'Medium';
+ font-family: 'Poppins';
+  font-weight: 500; 
   font-size: 20px;
   text-align: center;
     }
 
     p{
-      font-family: 'Medium';
+    font-family: 'Poppins';
+  font-weight: 400; 
     }
 h3{
-  font-family: 'SemiBold';
+ font-family: 'Poppins';
+  font-weight: 400; 
 }
     
 
@@ -815,7 +839,8 @@ h3{
     }
 
     .trabalhos p{
-      font-family: '  Medium';
+    font-family: 'Poppins';
+  font-weight: 400; 
     }
     .texto h3 {
 
@@ -859,7 +884,8 @@ h3{
       font-weight: normal;
       color: var(--roxo-claro);
       font-size: 0.9rem;
-      font-family: 'Medium';
+     font-family: 'Poppins';
+  font-weight: 400; 
     }
 
     /*dverdade*/
@@ -879,7 +905,8 @@ h3{
 }
 
 .dverdade p {
-  font-family: 'Medium';
+font-family: 'Poppins';
+  font-weight: 400; 
   font-size: 20px;
   text-align: center;
 }
@@ -921,7 +948,8 @@ h3{
 
     .logo-rodape h1 {
       font-size: 1.8rem;
-      font-family: 'Medium';
+      font-family: 'Poppins';
+  font-weight: 400; 
       margin-bottom: 5px;
       color: var(--branco);
       font-weight: normal;
@@ -943,7 +971,8 @@ h3{
       transition: var(--transicao);
       position: relative;
       font-size: 0.9rem;
-      font-family: 'Light';
+      font-family: 'Poppins';
+  font-weight: 400; 
     }
 
     .pages p::after {
@@ -1105,7 +1134,7 @@ h3{
       }
 
       .logo-header img {
-        width: 80px;
+        width: 50px;
         height: 70px;
       }
 
@@ -1167,7 +1196,8 @@ h3{
 
 }
 .tudo p{
-  font-family: 'Light';
+font-family: 'Poppins';
+  font-weight: 300; 
   color: #3e206e;
 }
 .cont{
@@ -1189,7 +1219,7 @@ section.compromisso .textoreal p em {
   <section class="hero">
     <header>
       <div class="logo-header">    
-        <img src="assets/images/logobranca.png" alt="Logo da empresa"> 
+        <img src="assets/img/logobranca.png" alt="Logo da empresa"> 
         <h1><strong>AUGEBIT</strong></h1>  
       </div>    
       <nav>       
@@ -1223,7 +1253,7 @@ section.compromisso .textoreal p em {
           </div>     
         </div>
         <div class="company-description">
-          <p>Somos uma empresa de gestão de projetos técnicos e artísticos com foco na inovação tecnológica e na personalização para empresas de diversos setores industriais presentes no mercado.</p>
+          <p>Desenvolvemos projetos técnicos e artísticos sob medida, combinando tecnologia avançada e visão estratégica para impulsionar a competitividade industrial em múltiplos mercados.</p>
         
         <div class="buttons">
           <a href="login.php">         
@@ -1243,7 +1273,7 @@ section.compromisso .textoreal p em {
         <h3>Quem <br>somos?</h3>
       </div>
       <div class="imagem1">
-        <img src="assets/images/Captura de tela 2025-05-09 103240 (2) 1 (1).png" alt="Equipe Augebit">
+        <img src="assets/img/peca.png" alt="Equipe Augebit">
       </div>
       <div class="somos">
         <div class="escrever">
@@ -1269,7 +1299,7 @@ section.compromisso .textoreal p em {
         
         <div class="slide active">
           <div class="slide-content">
-            <img src="assets/images/Frame 7.png" alt="Trabalho 1">
+            <img src="assets/img/ex1.png" alt="Trabalho 1">
             <div class="slide-text">
               Solução completa de design técnico para frascos de perfume, combinando estética refinada com funcionalidade industrial
             </div>
@@ -1279,7 +1309,7 @@ section.compromisso .textoreal p em {
         <!-- Slide 2 -->
         <div class="slide">
           <div class="slide-content">
-            <img src="assets/images/Frame 6.png" alt="Trabalho 2">
+            <img src="assets/img/ex2.png" alt="Trabalho 2">
             <div class="slide-text">
               Modelagem 3D precisa para hélices industriais, otimizando desempenho aerodinâmico e eficiência produtiva
             </div>
@@ -1289,7 +1319,7 @@ section.compromisso .textoreal p em {
         <!-- Slide 3 -->
         <div class="slide">
           <div class="slide-content">
-            <img src="assets/images/Frame 5.png" alt="Trabalho 3">
+            <img src="assets/img/ex3.png" alt="Trabalho 3">
             <div class="slide-text">
               Desenvolvimento técnico de engrenagens industriais com tolerância micrométrica para aplicações de alta performance
             </div>
@@ -1332,19 +1362,19 @@ Utilizamos softwares de ponta e contamos com uma <em>equipe qualificada</em> par
       </div>
       <div class="redes">
         <div class="rede">
-          <img src="assets/images/ic_outline-email.png" alt="Email">
+          <img src="assets/img/emailroxo.png" alt="Email">
           <p>Email</p>
         </div>
         <div class="rede">
-          <img src="assets/images/uil_linkedin.png" alt="Linkedin">
+          <img src="assets/img/linkedinroxo.png" alt="Linkedin">
           <p>Linkedin</p>
         </div>
         <div class="rede">
-          <img src="assets/images/ic_baseline-whatsapp.png" alt="Whatsapp">
+          <img src="assets/img/zaproxo.png" alt="Whatsapp">
           <p>Whatsapp</p>
         </div>
         <div class="rede">
-          <img src="assets/images/mdi_instagram.png" alt="Instagram">
+          <img src="assets/img/instaroxo.png" alt="Instagram">
           <p>Instagram</p>
         </div>
       </div>
@@ -1359,15 +1389,15 @@ Utilizamos softwares de ponta e contamos com uma <em>equipe qualificada</em> par
       <p>Entre em contato</p>
     </div>
     <div class="logo-rodape">
-      <img src="assets/images/logobranca.png" alt="Logo Augebit">
+      <img src="assets/img/logobranca.png" alt="Logo Augebit">
       <h1>AUGEBIT</h1>
       <p>Industrial design</p>
     </div>
     <div class="redescociais">
-      <img src="assets/images/emailwhite.png" alt="Email">
-      <img src="assets/images/instawhite.png" alt="Instagram">
-      <img src="assets/images/likendinwhite.png" alt="Linkedin">
-      <img src="assets/images/zapwhite.png" alt="Whatsapp">
+      <img src="assets/img/emailbranco.png" alt="Email">
+      <img src="assets/img/instabranco.png" alt="Instagram">
+      <img src="assets/img/linkedinbranco.png" alt="Linkedin">
+      <img src="assets/img/zapbranco.png" alt="Whatsapp">
     </div>
   </footer>
 

@@ -207,7 +207,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
        body {
    background: linear-gradient(135deg, 
         rgb(223, 223, 252) 0%, 
-rgb(179, 179, 250) 30%, 
+rgb(240, 240, 240) 30%, 
         #FFFFFF 100%);
     background-attachment: fixed;
     min-height: 100vh;
@@ -216,22 +216,23 @@ rgb(179, 179, 250) 30%,
     line-height: 1.6;
     margin: 0;
     padding: 0;
+     overflow-x: hidden;
 }
           @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-SemiBold.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-SemiBold.ttf') format('truetype');
             font-weight: 600;
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-Medium.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-Medium.ttf') format('truetype');
             font-weight: 500;
         }
 
         @font-face {
             font-family: 'Poppins';
-            src: url('../assets/fontes/Poppins/Poppins-Italic.ttf') format('truetype');
+            src: url('../assets/fonte/Poppins-Italic.ttf') format('truetype');
             font-weight: 400;
             font-style: italic;
         }
@@ -245,7 +246,81 @@ rgb(179, 179, 250) 30%,
             box-shadow:0 8px 20px rgba(0, 0, 0, 0.1) ;
             border: 1px solid rgba(62, 35, 106, 0.42);
         }
+  header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 10;
+            padding: 10px 0;
+        }
 
+        .logo-header {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .logo-header img {
+            position: relative;
+            width: 70px;
+            height: 80px;
+            top: -16px; 
+            left:30px
+        }
+
+        .logo-header h1 {
+          position:relative; 
+            font-size: 30px;
+            font-family: 'Poppins';
+            font-weight: 300;
+            left: 30px;
+        }
+
+        nav ul {
+            padding-right: 100px;
+            display: flex;
+            gap: 80px;
+            list-style: none;
+        }
+
+        nav a {
+            color: #3E236A;
+            text-decoration: none;
+            font-size: 19px;
+            font-family: 'Poppins';
+            transition: all 0.3s ease;
+            font-weight: 450;
+        }
+
+        nav a:hover {
+            color: #9999FF;
+        }
+
+        .active {
+            color: #3E236A;
+        }
+
+        .acount {
+            color: #3E236A;
+        }
+
+        .contato {
+            color: #3E236A;
+        }
+       
+        section {
+            padding: 30px;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        .container{
+            margin-top:120px;
+
+        }
         h2 {
             color: var(--primary-dark);
             margin-bottom: 25px;
@@ -263,6 +338,7 @@ rgb(179, 179, 250) 30%,
         .form-group label {
             display: block;
             margin-bottom: 8px;
+            margin-top:30px;
             font-weight: 600;
             color: #3E236A;
         }
@@ -484,9 +560,118 @@ rgb(179, 179, 250) 30%,
                 padding: 15px;
             }
         }
+        .rodape {
+  background-color: #9999FF;
+  width: 100vw; /* Usa a largura total da viewport */
+  min-height: 300px;
+  padding: 60px 15px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  margin-top: 80px;
+  left: 0;
+  box-sizing: border-box;
+}
+
+
+.logo-rodape {
+  text-align: center;
+  display: flex;
+  padding-left: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-rodape img {
+  width: 100px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.logo-rodape h1 {
+  font-size: 1.8rem;
+  font-family: 'Poppins';
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 25px;
+}
+
+
+.logo-rodape p {
+  font-size: 0.9rem;
+  margin-left: 25px;
+  font-family: 'Poppins';
+   font-weight: 300;
+}
+
+.pages {
+  margin-left: -110px;
+}
+.pages a {
+  display: block; /* Faz cada link ocupar sua própria linha */
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family:"Poppins";
+  font-weight:300; 
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
+}
+
+.pages a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.pages a:hover::after {
+  width: 100%;
+}
+
+.redescociais {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.redescociais img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.redescociais img:hover {
+  transform: scale(1.2);
+}
     </style>
 </head>
 <body>
+     <header>
+        <div class="logo-header">    
+            <img src="../assets/img/augebit.logo.png" alt="Logo da empresa"> 
+         
+        </div>    
+        <nav>       
+            <ul>         
+                <li><a href="#" class="active">Home</a></li>         
+                <li><a href="#quem-somos" class="acount">Projetos</a></li>         
+                <li><a href="#contato-section" class="contato">Sair</a></li>    
+            </ul>     
+        </nav>   
+    </header>    
     <div class="container">
         <h2>Solicitar Novo Projeto</h2>
 
@@ -540,8 +725,27 @@ rgb(179, 179, 250) 30%,
 
             <button type="submit" class="submit-btn">Enviar Solicitação</button>
         </form>
+       
     </div>
-
+ <footer class="rodape">
+    <div class="pages">
+  <a href="index.html">Home</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="#contato-section">Entre em contato</a>
+   <a href="logout.php">Sair</a>
+    </div>
+    <div class="logo-rodape">
+      <img src="../assets/img/logobranca.png" alt="Logo Augebit">
+      <h1>AUGEBIT</h1>
+      <p>Industrial design</p>
+    </div>
+    <div class="redescociais">
+      <img src="../assets/img/emailbranco.png" alt="Email">
+      <img src="../assets/img/instabranco.png" alt="Instagram">
+      <img src="../assets/img/linkedinbranco.png" alt="Linkedin">
+      <img src="../assets/img/zapbranco.png" alt="Whatsapp">
+    </div>
+  </footer>
     <script>
                let selectedFiles = [];
         
